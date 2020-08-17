@@ -1,0 +1,81 @@
+body{
+    background-image: url('../images/background-home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Alata', sans-serif;
+}
+.container-register{
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    margin: 25px auto;
+}
+.container-form{
+    background-color: rgb(118, 118, 118);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+.grupo-input{
+    position: relative;
+    margin: 10px;
+    width: 80%;
+    color: white;
+
+}
+.input-register{
+    background: none;
+    font-size: 15px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid white;
+    color: rgb(241 242 3);;
+}
+.input-register:focus{
+    outline: none;
+    color: rgb(241 242 3);;
+}
+.container-form h2{
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+.grupo-input label{
+    position: absolute;
+    left: 5px;
+    top: 7px;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+}
+
+.input-register:focus~label,
+.input-register:valid~label{
+    top: -18px;
+    font-size: 12px;
+    font-weight: bolder;    
+}
+.button-register{
+    width: 70%;
+    margin: 15px auto;
+    padding: 15px;
+    border: none;
+    background-color: rgb(4, 76, 5 );
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+    border-radius: 8px;
+}
+.button-register:hover{
+    background-color: rgb(25, 164, 27);
+}
+.grupo-input-email{
+    background-color: rgb(118, 118, 118);
+}

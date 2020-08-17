@@ -1,0 +1,28 @@
+body{
+    background-image: url('../images/background-home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Alata', sans-serif;
+}
+.container-body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.mensaje-bienvenida{
+    width: 45%;
+    margin: 30px 15px;
+    background-color: rgb(118, 118, 118);
+    box-sizing: border-box;
+    padding: 10px 15px;
+    color: white;
+}
+.mensaje-bienvenida h2{
+    text-align: center;
+}
+.container-register{ 
+ margin: 30px 15px;
+ width: 30%;;
+}
+
+

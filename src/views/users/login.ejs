@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Home | contact</title>
+</head>
+
+<%- include("../partials/header") %>
+
+<body>
+
+
+    <div class="container-login-page">
+
+        <div class="container-login">
+            
+            <div class="form-login-user">
+                
+                <div class="container-input"> <input type="text" name="email" class="input-form-login" id="email" placeholder="email@hotmail.com"></div>
+                <div class="container-input"> <input type="text" name="password" class="input-form-login" id="password" placeholder="password"><span class="view-password">Mostrar</span></div>
+   
+                <button type="submit" class="button-login"> login</button>
+
+                <div class="forget-password"> <a href="">¿olvidaste tu contraseña?</a></div>
+
+                
+               <a href="" class="redirect-register"><button type="submit" class="button-redirect-register"> Registrate</button></a> 
+
+
+            </div>
+               
+            </div>
+        </div>
+    </div>
+
+   
+</body>
+
+<%- include("../partials/footer") %>
+
+</html>

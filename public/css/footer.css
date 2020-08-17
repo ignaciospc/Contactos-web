@@ -1,0 +1,13 @@
+.container-footer{
+    font-family: 'Alata', sans-serif;
+    text-align: end;
+    margin: 10px 0;
+    
+}
+.copyraight{
+    margin: 0px;
+    color: white;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding: 0px 0px 0px 20px; 
+}

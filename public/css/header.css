@@ -1,0 +1,45 @@
+/*****header*****/
+.container-header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(207, 207, 207,0.3);
+    padding: 15px 5px;
+    font-family: 'Alata', sans-serif;
+}
+.header-contact{
+    display: flex;
+}
+.lista-user{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+.lista-user li{
+    margin: 0 25px;
+    color: white;
+    font-weight: bold;
+    border-left: 1px solid white;
+    box-sizing: border-box;
+    padding: 0px 0px 0px 20px;
+}
+.lista-user li a{
+    text-decoration: none;
+    color: white;
+}
+.header-contact-link{
+    margin: 0px;
+    color: white;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding: 0px 0px 0px 20px; 
+}
+.header-contact-link a{
+    text-decoration: none;
+    color: white
+}
+.icon-home a{
+    text-decoration: none;
+    color: white;
+    margin: 0px 10px;
+}

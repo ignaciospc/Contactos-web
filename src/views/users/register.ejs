@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/register.css">
+    <title></title>
+</head>
+
+<%- include("../partials/header") %>
+
+<body>
+
+    <div class="container-register">
+        
+        <form action="" method="" id="">
+
+            <div class="container-form">
+
+                <h2>Registro</h2>
+
+                <div class="grupo-input">
+                    <input class="input-register" type="text" name="nombre" id="nombre" required> <span class="barra"></span>
+                    <label for="">Nombre</label>
+                </div>
+                <div class="grupo-input">
+                    <input class="input-register" type="text" name="apellido" id="apellido" required> <span class="barra"></span>
+                    <label for="">Apellido</label>
+                </div>
+                <div class="grupo-input grupo-input-email">
+                    <input class="input-register" type="text" name="email" id="email" required> <span class="barra"></span>
+                    <label for="">Email</label>
+                </div>
+                <div class="grupo-input">
+                    <input class="input-register" type="password" name="password" id="password" required> <span class="barra"></span>
+                    <label for="">Password</label>
+                </div>
+                <div class="grupo-input">
+                    <input class="input-register" type="password" name="c_password" id="c_password" required> <span class="barra"></span>
+                    <label for="">Paswword</label>
+                </div>
+
+                <button class="button-register" type="submit">Registrarse</button>
+
+            </div>
+
+        </form>
+        
+        
+    </div>
+    
+</body>
+
+<%- include("../partials/footer") %>
+</html>
