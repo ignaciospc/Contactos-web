@@ -3,7 +3,6 @@ var router = express.Router();
 let controllerAccount = require('../controller/controllerAccount')
 
 router.get('/register', controllerAccount.register)
-
 router.get('/login', controllerAccount.login)
 
 
