@@ -1,4 +1,4 @@
-body{
+.backgroun-register{
     background-image: url('../images/background-home.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,11 +35,11 @@ body{
     border: none;
     width: 100%;
     border-bottom: 1px solid white;
-    color: rgb(241 242 3);;
+    color: rgb(241, 242, 3);
 }
 .input-register:focus{
     outline: none;
-    color: rgb(241 242 3);;
+    color: rgb(241 242 3);
 }
 .container-form h2{
     font-size: 25px;
@@ -78,4 +78,18 @@ body{
 }
 .grupo-input-email{
     background-color: rgb(118, 118, 118);
+}
+@media(min-width:1440px){
+    .container-register{
+        margin: 90px auto;
+    }
+    .container-form {
+        padding: 15px 25px;
+    }
+}
+@media(max-width:426px){
+    .container-register{
+        width: 100%;
+        margin: 25px -11px;
+    }
 }

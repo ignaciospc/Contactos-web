@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/createContact.css">
+    <title>Document</title>
+</head>
+
+<html>
+
+<%- include("../partials/header") %>
+
+<body class="container-background">
+
+    <div class="centrado-box">
+    
+        <div class="container-contacts-create">
+    
+            <div class="contact-info-create">
+    
+                <form action="">
+
+                    <h2 class="title-create-contact">Contacto Nuevo</h2>
+    
+                    <div class="grupo-contacto-create">
+                        <input type="text" name="nombre-contacto" id="nombre-contacto" class="input-create-contact" autocomplete="off">
+                        <label class="label-create" for="">Nombre Completo</label>
+                    </div>
+    
+                    <div class="grupo-contacto-create">
+                        <input type="text" name="tel-contacto" id="tel-contacto" class="input-create-contact" autocomplete="off">
+                        <label class="label-create" for="">Numero Telefonico</label>
+                    </div>
+    
+                    <div class="grupo-contacto-create">
+                        <input type="text" name="email-contacto" id="email-contacto" class="input-create-contact" autocomplete="off">
+                        <label class="label-create" for="">Email</label>
+                    </div>
+    
+                    <div class="interaccion-contacto">
+                        <button class="button-edit-contacto">Crear contacto</button>
+                    </div>
+    
+                </form>
+    
+    
+            </div>
+    
+        </div>
+    
+    </div>
+
+
+</body>
+
+<%- include("../partials/footer") %>
+
+</html>

@@ -111,4 +111,43 @@
 .button-delete-contacto:hover{
     background-color: rgb(255, 43, 43);
 }
+@media(min-width:1440px){
+    .cotainer-contacts-user{
+        max-width: 1250px;
+        margin: 20px auto;
+    }
+    .container-contacts{
+        width: 94%;
+    }
+    .contact-info{
+        width: 16%;
+    }
+    .email-contacto{
+        font-size: 15px;
+    }
+}
+@media(max-width:768px){
+    .contact-info{
+        width: 35%;
+    }
 
+}
+@media(max-width:426px){
+    .contact-info{
+        width: 72%;
+    }
+    .bar-search-contacts{
+        margin: 20px 19px;
+    }
+    .container-contacts{
+        border: 1px solid grey
+    }
+    @media(min-width:320px){
+        .contact-info{
+            width: 100%;
+            margin: 10px 0;
+        }
+
+    }
+
+}

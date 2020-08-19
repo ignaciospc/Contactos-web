@@ -11,3 +11,9 @@
     box-sizing: border-box;
     padding: 0px 0px 0px 20px; 
 }
+@media(min-width:1024px){
+    .container-footer{
+        max-width: 1250px;
+        margin: 0 auto;
+    }
+}

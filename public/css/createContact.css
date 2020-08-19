@@ -1,0 +1,75 @@
+.container-background{
+    background-image: url('../images/background-home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Alata', sans-serif;
+    
+}
+.centrado-box{
+    display: flex;
+    justify-content: center;
+    margin: 55px auto;
+}
+.title-create-contact{
+    margin-bottom: 35px;
+    margin-top: 5px;
+    color: white;
+}
+.container-contacts-create{
+    background-color: grey;
+    width: 200px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+.contact-info-create{
+    width: 100%;
+    background-color: grey;
+    padding: 20px 15px;
+}
+.input-create-contact{
+    outline: none;
+    border: none;
+    background: none;
+    border-bottom: 1px solid white;
+    display: block;
+    color: rgb(241, 242, 3);
+    padding: 10px 10px 10px 5px;
+}
+.grupo-contacto-create{
+    margin: 15px 0;
+    position: relative;
+}
+.label-create{
+    position: absolute;
+    top: 6px;
+    font-size: 12px; 
+    pointer-events: none;
+    transition: 0.5s ease-in-out all;
+    margin: 5px 0px;
+    color: white;
+}
+.input-create-contact:focus~label,
+.input-create-contact:valid~label{
+    top: -16px;
+    font-size: 12px;
+    font-weight: bolder;    
+}
+.interaccion-contacto{
+    width: 100%;
+}
+.button-edit-contacto{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px 5px;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 15px;
+}
+.button-edit-contacto:hover{
+    background-color: rgb(99, 248, 86)
+}
+
+
+

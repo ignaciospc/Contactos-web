@@ -75,3 +75,19 @@
 .button-redirect-register:hover{
     background-color: rgb(25, 164, 27);;
 }
+@media(min-width:1440px){
+    .container-login-page{
+        margin: 150px auto;
+        margin-bottom: 150px;
+        padding: 40px 10px;
+    }
+    .container-input{
+        margin: 12px auto;
+    }
+    .container-input input{
+        padding: 17px 10px;
+    }
+    .view-password{
+        top: 20px;
+    }
+}

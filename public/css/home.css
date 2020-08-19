@@ -24,5 +24,27 @@ body{
  margin: 30px 15px;
  width: 30%;;
 }
+@media(min-width:1440px){
+    .container-body{
+        max-width: 1250px;
+        margin:15px auto;
+    }
+    .mensaje-bienvenida{
+        width: 30%;
+    }
+}
+@media(max-width:768px){
+    .mensaje-bienvenida{
+        width: 60%;
+    }
+}
+@media(max-width:426px){
+    .mensaje-bienvenida{
+        width: 100%;
+    }
+    .container-register{
+        display: none;
+    }
+}
 
 
