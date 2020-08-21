@@ -1,9 +1,13 @@
 var express = require('express');
 var router = express.Router();
-let controllerAccount = require('../controller/controllerAccount')
+let controllerAccount = require('../controller/controllerAccount');
 
-router.get('/register', controllerAccount.register)
 router.get('/login', controllerAccount.login)
+
+router.get('/register', controllerAccount.registerForm)
+router.post('/register', controllerAccount.createUser)
+
+router.get('/profile', controllerAccount.profile)
 
 
 module.exports = router;

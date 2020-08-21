@@ -1,5 +1,5 @@
 .container-background{
-    background-image: url('../images/background-home.jpg');
+    background-image: url('../images/site/background-home.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Alata', sans-serif;
@@ -14,6 +14,7 @@
     margin-bottom: 35px;
     margin-top: 5px;
     color: white;
+    font-size: 22px;
 }
 .container-contacts-create{
     background-color: grey;
@@ -69,6 +70,17 @@
 }
 .button-edit-contacto:hover{
     background-color: rgb(99, 248, 86)
+}
+@media(min-width:1440px){
+        .centrado-box{
+            margin: 160px auto;
+        }
+        .contact-info-create{
+            padding: 40px 30px;
+        }
+        .input-create-contact{
+            padding: 10px 30px 10px 10px;
+        }
 }
 
 
