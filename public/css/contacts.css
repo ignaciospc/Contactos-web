@@ -84,7 +84,7 @@
     margin-top: 15px;
 }   
 .button-edit-contacto{
-    padding: 10px;
+    padding: 0px;
     width: 45%;
     margin: 0px 5px;
     border-radius: 15px;
@@ -93,6 +93,12 @@
     background-color: rgb(165, 236, 1);
     text-transform: uppercase;
     font-size: 12px;
+}
+.button-edit-contacto a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    
 }
 .button-edit-contacto:hover{
     background-color: rgb(87, 236, 1);
@@ -114,7 +120,8 @@
 @media(min-width:1440px){
     .cotainer-contacts-user{
         max-width: 1250px;
-        margin: 20px auto;
+        margin: 40px auto;
+        margin-bottom: 300px;
     }
     .container-contacts{
         width: 94%;

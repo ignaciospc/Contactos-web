@@ -21,61 +21,25 @@
                 <input type="text" name="bar-search" id="bar-search" placeholder="Buscar tu contacto" class="bar-busqueada-contacto" autocomplete="off">
                 <button class="add-contacto"><a href="/contact/create"><i class="fas add-icon fa-plus-circle"></i></a></button>
             </div>
-
+        
               <div class="container-contacts">
+                  <% for (const contacto of contactos) { %>
                 <div class="contact-info">
-                    <h3 class="nombre-contact">Ignacio Nicolas Soria</h3>
-                    <div class="numero-telefono-contacto"> 11-5971-4439</div>
-                    <div class="email-contacto">ignacio.n.soria@hotmail.com</div>
+                    <h3 class="nombre-contact"> <%= contacto.nombreCompleto %>  </h3>
+                    <div class="numero-telefono-contacto"> <%= contacto.telefono %></div>
+                    <div class="email-contacto"><%= contacto.email %></div>
                     <div class="interaccion-contacto">
-                        <button class="button-edit-contacto">Editar</button>
-                        <button class="button-delete-contacto">Eliminar</button>
+                       <button class="button-edit-contacto" > <a href="/contact/edit/<%= contacto.id %> "> Editar</a> </button>
+                       <button class="button-delete-contacto">Eliminar</button>
                     </div>
                 </div>
-
-                <div class="contact-info">
-                    <h3 class="nombre-contact">Ignacio Nicolas Soria</h3>
-                    <div class="numero-telefono-contacto"> 11-5971-4439</div>
-                    <div class="email-contacto">ignacio.n.soria@hotmail.com</div>
-                    <div class="interaccion-contacto">
-                        <button class="button-edit-contacto">Editar</button>
-                        <button class="button-delete-contacto">Eliminar</button>
-                    </div>
-                </div>
-
-                <div class="contact-info">
-                    <h3 class="nombre-contact">Ignacio Nicolas Soria</h3>
-                    <div class="numero-telefono-contacto"> 11-5971-4439</div>
-                    <div class="email-contacto">ignacio.n.soria@hotmail.com</div>
-                    <div class="interaccion-contacto">
-                        <button class="button-edit-contacto">Editar</button>
-                        <button class="button-delete-contacto">Eliminar</button>
-                    </div>
-                </div>
-                <div class="contact-info">
-                    <h3 class="nombre-contact">Ignacio Nicolas Soria</h3>
-                    <div class="numero-telefono-contacto"> 11-5971-4439</div>
-                    <div class="email-contacto">ignacio.n.soria@hotmail.com</div>
-                    <div class="interaccion-contacto">
-                        <button class="button-edit-contacto">Editar</button>
-                        <button class="button-delete-contacto">Eliminar</button>
-                    </div>
+                <% } %> 
                 </div>
                 
-                <div class="contact-info">
-                    <h3 class="nombre-contact">Ignacio Nicolas Soria</h3>
-                    <div class="numero-telefono-contacto"> 11-5971-4439</div>
-                    <div class="email-contacto">ignacio.n.soria@hotmail.com</div>
-                    <div class="interaccion-contacto">
-                        <button class="button-edit-contacto">Editar</button>
-                        <button class="button-delete-contacto">Eliminar</button>
-                    </div>
-                </div>
             </div>
 
-
         </div>
-    
+       
 
 </body>
 

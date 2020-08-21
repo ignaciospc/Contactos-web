@@ -7,7 +7,10 @@ let contactsJson = path.join(__dirname, "../data-json/contacts.json");
 module.exports = {
 
     allContacts : (req, res) => {
-        res.render("contacts/contacts");
+
+        let contactos = moduloContacto.findAll()
+
+        res.render("contacts/contacts", {contactos:contactos});
     },
     createForm : (req,res) => {
         res.render("contacts/createContact")
@@ -21,7 +24,13 @@ module.exports = {
 
         let newContact = moduloContacto.createContact(contacto);
         
-        res.redirect("/contact/");
+        res.redirect("/contact");
+    },
+    editContact : (req, res) => {  
+
+        res.render("contacts/editContact")
+
     }
+    
 
 }

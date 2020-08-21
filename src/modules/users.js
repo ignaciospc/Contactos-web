@@ -21,13 +21,35 @@ let moduleUser =  {
 
         let contenidoJson = moduleUser.findAll()
 
+        // se agrega el campo ID
+
+        infoUsuario.id = moduleUser.addId()
+
         contenidoJson.push(infoUsuario)
+
+        console.log(contenidoJson);
 
         let nuevoContenido = JSON.stringify(contenidoJson, null, " ");
 
         fs.writeFileSync(userJson, nuevoContenido);
 
         return nuevoContenido;
+
+    },
+    addId : () => {
+
+        let contenidoJson = moduleUser.findAll();
+
+        let nroId = 0;
+
+        contenidoJson.forEach( x => {
+            if (nroId <= x.id) {
+                nroId = x.id;
+            }
+           
+        })
+
+        return nroId + 1
 
     }
 

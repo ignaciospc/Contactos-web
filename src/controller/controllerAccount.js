@@ -2,6 +2,7 @@ let moduloUser = require('../modules/users');
 let path =require('path');
 let fs = require('fs');
 let userJson = path.join(__dirname, "../data-json/users.json"); 
+let bcrypt = require ("bcrypt");
 
  
 
@@ -15,20 +16,23 @@ module.exports ={
     },
     createUser : (req, res) => {
 
+        let sal = 10;
+
         let infoUsuario = {
             nombre: req.body.nombre,
             apellido: req.body.apellido,
             email: req.body.email,
-            password: req.body.password,
+            password: bcrypt.hashSync(req.body.password, sal) ,
             c_password:req.body.c_password,
         }; 
       
        let newUser = moduloUser.createUser(infoUsuario);
         
-        res.send(newUser); //redirect vista User
+        res.redirect('/account/profile'); 
     },
     login: (req, res) =>{
         res.render("users/login")
-    }
+    },
+   
 
 }

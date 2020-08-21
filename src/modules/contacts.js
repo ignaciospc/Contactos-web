@@ -1,5 +1,6 @@
 let fs = require('fs');
 let path =require('path');
+const moduleUser = require('./users');
 let contactsJson = path.join(__dirname, "../data-json/contacts.json"); 
 
 let moduleContacts = {
@@ -17,6 +18,8 @@ let moduleContacts = {
 
         let contenidoJson = moduleContacts.findAll();
 
+        infoContacto.id = moduleContacts.addId();
+
         contenidoJson.push(infoContacto);
 
         let newContenido = JSON.stringify(contenidoJson, null, " ");
@@ -24,6 +27,22 @@ let moduleContacts = {
         fs.writeFileSync(contactsJson, newContenido);
 
         return newContenido; 
+
+    },
+    addId : () => {
+
+        let contenidoJson = moduleContacts.findAll();
+
+        let nroId = 0;
+
+        contenidoJson.forEach( x => {
+            if (nroId <= x.id) {
+                nroId = x.id;
+            }
+           
+        })
+
+        return nroId + 1
 
     }
 
