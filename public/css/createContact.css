@@ -18,7 +18,7 @@
 }
 .container-contacts-create{
     background-color: grey;
-    width: 200px;
+    width: 240px;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -36,6 +36,7 @@
     display: block;
     color: rgb(241, 242, 3);
     padding: 10px 10px 10px 5px;
+    width: 90%;
 }
 .grupo-contacto-create{
     margin: 15px 0;
@@ -80,6 +81,10 @@
         }
         .input-create-contact{
             padding: 10px 30px 10px 10px;
+        }
+        .container-contacts-create{
+            width: 340px;
+    
         }
 }
 

@@ -30,8 +30,10 @@
                     <div class="email-contacto"><%= contacto.email %></div>
                     <div class="interaccion-contacto">
                        <button class="button-edit-contacto" > <a href="/contact/edit/<%= contacto.id %> "> Editar</a> </button>
-                       <button class="button-delete-contacto">Eliminar</button>
-                    </div>
+                       <form action="/contact/delete/<%= contacto.id %>?_method=DELETE " method="POST">
+                       <button class="button-delete-contacto"> Eliminar  </button>
+                      </form>
+                    </div>  
                 </div>
                 <% } %> 
                 </div>

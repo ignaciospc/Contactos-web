@@ -1,7 +1,7 @@
-let fs = require('fs');
-let path =require('path');
+const fs = require('fs');
+const path =require('path');
 const moduleUser = require('./users');
-let contactsJson = path.join(__dirname, "../data-json/contacts.json"); 
+const contactsJson = path.join(__dirname, "../data-json/contacts.json"); 
 
 let moduleContacts = {
 

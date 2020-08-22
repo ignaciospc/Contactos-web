@@ -7,7 +7,9 @@ router.get('/',controllerContacts.allContacts)
 router.get('/create',controllerContacts.createForm)
 router.post('/create', controllerContacts.createContact)
 
-router.get('/edit/:id', controllerContacts.editContact)
+router.get('/edit/:id', controllerContacts.editForm)
+router.put('/edit/:id', controllerContacts.editContact)
+router.delete('/delete/:id',controllerContacts.deleteContact)
 
 
 module.exports = router;
