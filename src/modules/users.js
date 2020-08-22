@@ -38,6 +38,8 @@ let moduleUser =  {
     },
     addId : () => {
 
+        // se pude remplazar por npm install uuid   
+
         let contenidoJson = moduleUser.findAll();
 
         let nroId = 0;

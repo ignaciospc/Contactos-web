@@ -10,5 +10,11 @@
   "telefono": "1136783358",
   "email": "molina.mc@hotmail.com",
   "id": 2
+ },
+ {
+  "nombreCompleto": "pruebaParaEditar ",
+  "telefono": "numeroEditado",
+  "email": "EmialEditar ",
+  "id": 3
  }
 ]

@@ -31,6 +31,8 @@ let moduleContacts = {
     },
     addId : () => {
 
+        // se puede remplazar por npm uuid
+
         let contenidoJson = moduleContacts.findAll();
 
         let nroId = 0;
@@ -43,8 +45,20 @@ let moduleContacts = {
         })
 
         return nroId + 1
+    },
+    update : (updateContact) => {
 
+        let json = moduleContacts.findAll();
+
+        let nuevoArray = json.filter( x => x.id != updateContact.id );
+
+        nuevoArray.push(updateContact)
+
+        let nuevo = JSON.stringify(nuevoArray, null, " ");
+
+        fs.writeFileSync(contactsJson, nuevo) 
     }
+    
 
 }
 

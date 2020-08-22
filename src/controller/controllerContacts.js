@@ -38,7 +38,22 @@ module.exports = {
 
     },
     editContact : (req, res) =>{
-        res.send("aca va logica papa de edit");
+
+        //busco contacto
+
+        let contenidoJson = moduloContacto.findAll();
+
+        let contactoPosicion = contenidoJson.find( x => x.id == req.params.id);
+
+        //cambio los atributos
+
+        contactoPosicion.nombreCompleto = req.body.nombreContacto;
+        contactoPosicion.telefono = req.body.telContacto;
+        contactoPosicion.email = req.body.emailContacto;
+
+        moduloContacto.update(contactoPosicion);
+
+        res.redirect("/contact")
     },
     deleteContact : (req,res) => {
         

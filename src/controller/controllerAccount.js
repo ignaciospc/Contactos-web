@@ -12,7 +12,7 @@ module.exports ={
        res.render("users/register");
     },
     profile: (req, res) =>{
-        res.render("users/profile")
+        res.render("users/profile");
     },
     createUser : (req, res) => {
 
@@ -23,16 +23,29 @@ module.exports ={
             apellido: req.body.apellido,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, sal) ,
-            c_password:req.body.c_password,
         }; 
       
-       let newUser = moduloUser.createUser(infoUsuario);
+        moduloUser.createUser(infoUsuario);
         
         res.redirect('/account/profile'); 
     },
     login: (req, res) =>{
-        res.render("users/login")
+        res.render("users/login");
     },
+    processLogin: (req, res) => {
+
+          let contenidoJson = moduloUser.findAll();
+          
+
+        for (let i = 0; i < contenidoJson.length; i++ ){
+
+            if(req.body.email === contenidoJson[i].email && bcrypt.compareSync(req.body.password, contenidoJson[i].password )){
+               res.redirect("/contact/")
+            }
+        }
+        
+        res.send("Credenciales Incorrectas")
+    }
    
 
 }

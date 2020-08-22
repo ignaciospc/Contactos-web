@@ -4,39 +4,20 @@
   "apellido": "Molina",
   "email": "molina.mc@hotmail.com",
   "password": "$2b$10$R0VxZxUqbHOOwAhFPSwRx.hxw380v1YFsZ59fdf.zGBJo0qbLV62q",
-  "c_password": "asdasd",
   "id": 1
  },
  {
-  "nombre": "asd",
-  "apellido": "sdsad",
-  "email": "asdsad",
-  "password": "$2b$10$b4blnlDRpfKgPZldwGKpDeycVL/A26CU7TIR/oqjc.YALxP2VvSzS",
-  "c_password": "dsadsdsa",
+  "nombre": "ignacio",
+  "apellido": "soria",
+  "email": "ignacio.n.soria@hotmail.com",
+  "password": "$2b$10$PjGuOIluxQRu57ee/xGOeOQPz2uPJVYs4LyOvLtBXOdm9I6Zm0YOW",
   "id": 2
  },
  {
-  "nombre": "asd",
-  "apellido": "sdsad",
-  "email": "asdsad",
-  "password": "$2b$10$ZPav1UgJnHYUeGyv0tZWdOI75rHAt8MGqndxTXtTjYnIqLARNjFXi",
-  "c_password": "dsadsdsa",
+  "nombre": "prueba",
+  "apellido": "pureba",
+  "email": "prueba@hot.com",
+  "password": "$2b$10$x3KSG0JSW9vjHg9sTdJBge8oQl.3bIecP543zunXpXWRfYv4f13uO",
   "id": 3
- },
- {
-  "nombre": "asd",
-  "apellido": "sdsad",
-  "email": "asdsad",
-  "password": "$2b$10$baR1HeRKmlNkgDj2TciLr.JjUJYQkefflGRyhZ9mxkKSgYGVREt1e",
-  "c_password": "dsadsdsa",
-  "id": 4
- },
- {
-  "nombre": "asda",
-  "apellido": "sdsad",
-  "email": "asdsad",
-  "password": "$2b$10$duu.bUKP8vEY/PxzYmGbiOhkhNDyped/iTgivkGOaNgD9Rg8MRan6",
-  "c_password": "adsad",
-  "id": 5
  }
 ]
