@@ -1,7 +1,4 @@
 let moduloUser = require('../modules/users');
-let path =require('path');
-let fs = require('fs');
-let userJson = path.join(__dirname, "../data-json/users.json"); 
 let bcrypt = require ("bcrypt");
 
  
@@ -12,6 +9,7 @@ module.exports ={
        res.render("users/register");
     },
     profile: (req, res) =>{
+        
         res.render("users/profile");
     },
     createUser : (req, res) => {
@@ -40,11 +38,17 @@ module.exports ={
         for (let i = 0; i < contenidoJson.length; i++ ){
 
             if(req.body.email === contenidoJson[i].email && bcrypt.compareSync(req.body.password, contenidoJson[i].password )){
-               res.redirect("/contact/")
+               res.redirect("/account/profile/")
             }
         }
         
         res.send("Credenciales Incorrectas")
+    },
+    loadAvatar: (req, res) => {
+
+        //logica cargar avatar
+
+
     }
    
 

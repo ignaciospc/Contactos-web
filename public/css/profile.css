@@ -22,7 +22,7 @@
     text-align: center;
 }
 .img-profile img{
-    width: 50%;
+    width: 45%;
     margin: 15px auto;
     border-radius: 50%;
 }
@@ -85,6 +85,11 @@
 .log-out-profile:hover{
     background-color: rgb(255, 28, 28);
 }
+.form-file{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
 @media(min-width:768px){
     .container-profile{
         display: flex;
@@ -121,7 +126,7 @@
        padding: 20px 10px;
    }
    .img-profile img{
-       width: 50%;
+       width: 45%;
    }
 }
 @media(min-width:1440px){
