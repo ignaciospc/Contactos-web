@@ -8,8 +8,6 @@
     width: 300px;
     margin: 100px auto;
     margin-bottom: 150px;
-    
-
 }
 .form-login-user{
     text-align: center;
@@ -74,6 +72,40 @@
 }
 .button-redirect-register:hover{
     background-color: rgb(25, 164, 27);;
+}
+.chekbox{
+    flex-wrap: wrap;
+    display: flex;
+    width: 85%;
+    margin: 10px auto;
+}
+.remember-input{
+    margin: 0 10px;
+}
+.remember-label{
+    margin: -1px 0px;
+}
+.errors-back{
+    border: 2px solid rgb(155, 0, 0);
+    width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 5px 15px;
+    text-align: initial;
+    font-size: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: rgb(155, 0, 0);;
+}
+.list-errors{
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+}
+.error-back{
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
 }
 @media(min-width:1440px){
     .container-login-page{

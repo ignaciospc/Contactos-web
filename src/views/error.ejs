@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ERROR || 404</title>
-    <link rel="stylesheet" href="/css/error.css">
-</head>
-<body class="backgroun-error">
-    <div class="container-error">
-        <img src="/images/site/404.png" alt="">
-        <a class="a-inicio" href="/">Inicio</a>
-    </div>
-</body>
-</html>
+<h1><%= message %></h1>
+<h2><%= error.status %></h2>
+<pre><%= error.stack %></pre>

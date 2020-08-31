@@ -20,6 +20,17 @@
             
             <div class="form-login-user">
 
+                <% if( typeof errors != "undefined") {  %>         
+                <div class="errors-back">
+                    <ul class="list-errors">  
+                        <%for (const error of errors) { %>
+                            <li class="error-back">  <%= error.msg %>   </li>
+                        <% } %> 
+                                                
+                    </ul>
+                </div>
+               <% }  %> 
+
                 <form action="/account/login" method="POST" class="" id="">
                 
                 <div class="container-input"> <input type="text" name="email" class="input-form-login" id="email" placeholder="email@hotmail.com" autocomplete="off"></div>
@@ -27,6 +38,11 @@
                 <div class="container-input"> <input type="text" name="password" class="input-form-login" id="password" placeholder="password"><span class="view-password">Mostrar</span></div>
    
                 <button type="submit" class="button-login"> login</button>
+
+                <div class="chekbox">
+                   <input type="checkbox" class="remember-input" name="remember" id="remember">
+                   <label for="remember" class="remember-label">Recuerdame</label>
+                </div>
 
                 </form>
 

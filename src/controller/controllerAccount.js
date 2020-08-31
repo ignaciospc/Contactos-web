@@ -1,5 +1,7 @@
 let moduloUser = require('../modules/users');
 let bcrypt = require ("bcrypt");
+const {check, validationResult, body} = require("express-validator");
+const moduleUser = require('../modules/users');
 
  
 
@@ -9,10 +11,18 @@ module.exports ={
        res.render("users/register");
     },
     profile: (req, res) =>{
+
+        let usuarios =  moduleUser.findAll();
+
+        console.log(usuarios);
         
         res.render("users/profile");
     },
     createUser : (req, res) => {
+
+        let errores = validationResult(req)
+
+        if( errores.isEmpty()){
 
         let sal = 10;
 
@@ -24,25 +34,69 @@ module.exports ={
         }; 
       
         moduloUser.createUser(infoUsuario);
-        
+
         res.redirect('/account/profile'); 
+
+        } else {
+
+            res.render("users/register", { errores : errores.errors})
+
+        }
+
+      
     },
     login: (req, res) =>{
         res.render("users/login");
     },
     processLogin: (req, res) => {
 
-          let contenidoJson = moduloUser.findAll();
-          
+          let errors = validationResult(req);
 
-        for (let i = 0; i < contenidoJson.length; i++ ){
+          if( errors.isEmpty() ){
 
-            if(req.body.email === contenidoJson[i].email && bcrypt.compareSync(req.body.password, contenidoJson[i].password )){
-               res.redirect("/account/profile/")
+            let contenidoJson = moduloUser.findAll();
+
+            for (let i = 0; i < contenidoJson.length; i++ ){
+
+                if(req.body.email === contenidoJson[i].email && bcrypt.compareSync(req.body.password, contenidoJson[i].password )){
+                   res.redirect("/account/profile/")
+                }
             }
-        }
-        
-        res.send("Credenciales Incorrectas")
+            
+            res.send("Credenciales Incorrectas")
+              
+          }else{
+              
+              return res.render("users/login",{errors : errors.errors});
+
+          }
+
+
+       
+    },
+    processLoginHome: (req,res) => {
+
+        let errors = validationResult(req);
+
+          if( errors.isEmpty() ){
+
+            let contenidoJson = moduloUser.findAll();
+
+            for (let i = 0; i < contenidoJson.length; i++ ){
+
+                if(req.body.email === contenidoJson[i].email && bcrypt.compareSync(req.body.password, contenidoJson[i].password )){
+                   res.redirect("/account/profile/")
+                }
+            }
+            
+            res.send("Credenciales Incorrectas")
+              
+          }else{
+              
+              return res.render("home/home",{errors : errors.errors});
+
+          }
+
     },
     loadAvatar: (req, res) => {
 

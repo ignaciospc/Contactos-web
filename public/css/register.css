@@ -79,6 +79,28 @@
 .grupo-input-email{
     background-color: rgb(118, 118, 118);
 }
+.errors-back{
+    border: 2px solid rgb(155, 0, 0);
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 5px 15px;
+    text-align: initial;
+    font-size: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: rgb(155, 0, 0);
+    width: 90%;
+}
+.list-errors{
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+}
+.error-back{
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
 @media(min-width:1440px){
     .container-register{
         margin: 90px auto;
@@ -86,10 +108,16 @@
     .container-form {
         padding: 15px 25px;
     }
+    .error-back{
+        font-size: 15px;
+    }
 }
 @media(max-width:426px){
     .container-register{
         width: 100%;
         margin: 25px -11px;
+    }
+    .error-back{
+        font-size: 12px;
     }
 }

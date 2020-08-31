@@ -18,6 +18,17 @@
 
             <div class="container-form">
 
+                <% if( typeof errores != "undefined") {  %>         
+                    <div class="errors-back">
+                        <ul class="list-errors">  
+                            <%for (const error of errores) { %>
+                                <li class="error-back">  <%= error.msg %>   </li>
+                            <% } %> 
+                                                    
+                        </ul>
+                    </div>
+                   <% }  %> 
+
                 <h2>Registro</h2>
 
                 <div class="grupo-input">

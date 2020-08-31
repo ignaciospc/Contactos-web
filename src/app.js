@@ -1,13 +1,13 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-let methodOverride = require('method-override');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const methodOverride = require('method-override');
 
-var indexRouter = require('./routes/index');
-var accountRouter = require('./routes/account');
-let contactsRouter = require('./routes/contacts')
+const indexRouter = require('./routes/index');
+const accountRouter = require('./routes/account');
+const contactsRouter = require('./routes/contacts')
 
 var app = express();
 

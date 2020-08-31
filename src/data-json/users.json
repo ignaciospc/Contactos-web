@@ -19,5 +19,12 @@
   "email": "prueba@hot.com",
   "password": "$2b$10$x3KSG0JSW9vjHg9sTdJBge8oQl.3bIecP543zunXpXWRfYv4f13uO",
   "id": 3
+ },
+ {
+  "nombre": "IGNACIO",
+  "apellido": "SORIA",
+  "email": "ignacio.n.soria@hotmail.com",
+  "password": "$2b$10$0zQbA1E0VYbY.vO1ATBZJex8CGY9Tynyq88hMKS.c6Ko5Ea.9xcnC",
+  "id": 4
  }
 ]
