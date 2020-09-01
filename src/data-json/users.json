@@ -3,28 +3,14 @@
   "nombre": "Maria Clara",
   "apellido": "Molina",
   "email": "molina.mc@hotmail.com",
-  "password": "$2b$10$R0VxZxUqbHOOwAhFPSwRx.hxw380v1YFsZ59fdf.zGBJo0qbLV62q",
+  "password": "$2b$10$v1U2nXvO87ZMJVBMQ8M29OjMcUNKq3s7EgWLzmhPAObY1p.umqYY6",
   "id": 1
  },
  {
   "nombre": "ignacio",
   "apellido": "soria",
   "email": "ignacio.n.soria@hotmail.com",
-  "password": "$2b$10$PjGuOIluxQRu57ee/xGOeOQPz2uPJVYs4LyOvLtBXOdm9I6Zm0YOW",
+  "password": "$2b$10$B1Y5PSKWHLOxLIExYGgCM.39wMpVnIyeM/nCRsp1Bjrbw2sY5dlcy",
   "id": 2
- },
- {
-  "nombre": "prueba",
-  "apellido": "pureba",
-  "email": "prueba@hot.com",
-  "password": "$2b$10$x3KSG0JSW9vjHg9sTdJBge8oQl.3bIecP543zunXpXWRfYv4f13uO",
-  "id": 3
- },
- {
-  "nombre": "IGNACIO",
-  "apellido": "SORIA",
-  "email": "ignacio.n.soria@hotmail.com",
-  "password": "$2b$10$0zQbA1E0VYbY.vO1ATBZJex8CGY9Tynyq88hMKS.c6Ko5Ea.9xcnC",
-  "id": 4
  }
 ]

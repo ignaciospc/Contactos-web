@@ -17,12 +17,12 @@
     flex-wrap: wrap;
     width: 100%;
     text-align: center;
-    padding: 10px 15px;
+    padding: 10px 25px;
     border-radius: 8px;
 }
 .grupo-input{
     position: relative;
-    margin: 10px;
+    margin: 12px auto;
     width: 80%;
     color: white;
 
@@ -104,9 +104,6 @@
 @media(min-width:1440px){
     .container-register{
         margin: 90px auto;
-    }
-    .container-form {
-        padding: 15px 25px;
     }
     .error-back{
         font-size: 15px;

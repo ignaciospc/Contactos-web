@@ -2,6 +2,8 @@ const fs = require('fs');
 const path =require('path');
 const moduloContacto = require('../modules/contacts.js');
 const contactsJson = path.join(__dirname, "../data-json/contacts.json"); 
+const {validationResult} = require("express-validator")
+
 
 
 
@@ -17,15 +19,23 @@ module.exports = {
         res.render("contacts/createContact");
     },
     createContact : (req, res) => {
-        let contacto = {
-            nombreCompleto:req.body.nombreContacto,
-            telefono: req.body.telContacto,
-            email:req.body.emailContacto,
-        };
 
-        let newContact = moduloContacto.createContact(contacto);
+        let errores = validationResult(req)
+
+        if( errores.isEmpty()){
+            let contacto = {
+                nombreCompleto:req.body.nombreContacto,
+                telefono: req.body.telContacto,
+                email:req.body.emailContacto,
+            };
+            moduloContacto.createContact(contacto);
+
+            res.redirect("/contact");
+        }else{
+            res.render("contacts/createContact", {errors : errores.errors})
+        }
         
-        res.redirect("/contact");
+        
     },
     editForm : (req, res) => {  
 

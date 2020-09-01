@@ -59,12 +59,21 @@ module.exports ={
             for (let i = 0; i < contenidoJson.length; i++ ){
 
                 if(req.body.email === contenidoJson[i].email && bcrypt.compareSync(req.body.password, contenidoJson[i].password )){
-                   res.redirect("/account/profile/")
+                   let  usuarioALoguearse = contenidoJson[i];
+                   break;
                 }
             }
-            
-            res.send("Credenciales Incorrectas")
-              
+
+            /*if (usuarioALoguearse == undefined){
+
+                res.render("users/login", {errores:[
+                    {msg:"credenciales invalidas"}
+                ]});
+            }
+
+            req.session.usuarioALoguearse = usuarioALoguearse */
+            res.send("credencialesinvalidas")
+
           }else{
               
               return res.render("users/login",{errors : errors.errors});

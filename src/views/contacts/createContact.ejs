@@ -22,6 +22,17 @@
     
                 <form action="/contact/create" method="POST" id="">
 
+                    <% if( typeof errors != "undefined") {  %>         
+                        <div class="errors-back">
+                            <ul class="list-errors">  
+                                <%for (const error of errors) { %>
+                                    <li class="error-back">  <%= error.msg %>   </li>
+                                <% } %> 
+                                                        
+                            </ul>
+                        </div>
+                       <% }  %> 
+
                     <h2 class="title-create-contact">Contacto Nuevo</h2>
     
                     <div class="grupo-contacto-create">
