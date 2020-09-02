@@ -51,6 +51,7 @@ module.exports ={
     processLogin: (req, res) => {
 
           let errors = validationResult(req);
+          let usuarioALoguearse = undefined;
 
           if( errors.isEmpty() ){
 
@@ -58,21 +59,25 @@ module.exports ={
 
             for (let i = 0; i < contenidoJson.length; i++ ){
 
-                if(req.body.email === contenidoJson[i].email && bcrypt.compareSync(req.body.password, contenidoJson[i].password )){
-                   let  usuarioALoguearse = contenidoJson[i];
-                   break;
+                if(req.body.email === contenidoJson[i].email){
+                    if(bcrypt.compareSync(req.body.password, contenidoJson[i].password )){
+                          usuarioALoguearse = contenidoJson[i];
+                          break
+                    }
+                   
                 }
             }
 
-            /*if (usuarioALoguearse == undefined){
-
-                res.render("users/login", {errores:[
+            if (usuarioALoguearse == undefined){
+                res.render("users/login", {errors:[
                     {msg:"credenciales invalidas"}
                 ]});
             }
 
-            req.session.usuarioALoguearse = usuarioALoguearse */
-            res.send("credencialesinvalidas")
+            req.session.usuarioLogueado = usuarioALoguearse 
+            //res.send("credencialesinvalidas")
+
+            res.redirect("/contact")
 
           }else{
               

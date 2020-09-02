@@ -1,11 +1,13 @@
 const express = require('express');
 const router = express.Router();
+const path = require("path");
 const controllerContacts = require('../controller/controllerContacts')
 
 const validationCreateContact = require("../middleware/validation-back/validationContacts")
 const validationEditContact = require("../middleware/validation-back/validationEdit")
+const authLog = require(path.join(__dirname, "../middleware/authMiddleware.js"));
 
-router.get('/',controllerContacts.allContacts)
+router.get('/',authLog,controllerContacts.allContacts)
 
 router.get('/create',controllerContacts.createForm)
 router.post('/create', validationCreateContact, controllerContacts.createContact)
