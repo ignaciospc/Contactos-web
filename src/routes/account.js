@@ -15,7 +15,7 @@ router.post('/login-home', validationLogin, controllerAccount.processLoginHome);
 router.get('/register', controllerAccount.registerForm);
 router.post('/register', validationRegister, controllerAccount.createUser);
 
-router.get('/profile/', authLog,  controllerAccount.profile);
+router.get('/profile', authLog,  controllerAccount.profile);
 
 
 

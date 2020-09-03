@@ -10,3 +10,4 @@
 31-8-2020 --- se comenzo a trabajar con Middlewares ---
 01-9-2020 --- se agregaron todas las validaciones de parte del back, queda faltante la de edit. se comenzo a trabajar con session ---
 02-9-2020 --- se agrego middleware de autenticacion para algunos sectores de la pagina, y se esta terminando de usar session ---
+03-9-2020 --- Se trabajo con res.locals y se puedo hacer aparecer login, register y profile cunado corresponde, queda colocar el nombre del user en el header ---

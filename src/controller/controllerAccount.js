@@ -10,13 +10,10 @@ module.exports ={
     registerForm: (req, res) =>{
        res.render("users/register");
     },
-    profile: (req, res) =>{
+    profile: (req, res) =>{    
+        let infoUserLog = req.session.usuarioLogueado;
 
-        let usuarios =  moduleUser.findAll();
-
-        console.log(usuarios);
-        
-        res.render("users/profile");
+        res.render("users/profile",{user:infoUserLog});
     },
     createUser : (req, res) => {
 

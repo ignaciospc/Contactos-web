@@ -29,10 +29,10 @@
         </div>
         <div class="personal-date">
             <label for="" class="title-info-user">Informacion Personal</label>
-            <div class="group-info-user" > <label for="">Nombre: </label> <span class="info-profile"> Ignacio</span> </div>
-            <div class="group-info-user" > <label for="">Apellido: </label> <span class="info-profile"> Soria</span> </div>
-            <div class="group-info-user" > <label for="">Email: </label> <span class="info-profile"> ignacio@ho.com</span> </div>
-            <div class="group-info-user" > <label for="">Contraseña: </label> <span class="info-profile"> ****** </span> </div>
+            <div class="group-info-user" > <label for="">Nombre: </label> <span class="info-profile"> <%= user.nombre %> </span> </div>
+            <div class="group-info-user" > <label for="">Apellido: </label> <span class="info-profile"> <%= user.apellido %></span> </div>
+            <div class="group-info-user" > <label for="">Email: </label> <span class="info-profile"> <%= user.email %></span> </div>
+            <div class="group-info-user" > <label for="">Contraseña: </label> <span class="info-profile" type=> CONTRASEÑA </span> </div>
             <div class="btn-edit">
                 <button class="btn-edit-info-profile">Editar</button>
             </div>

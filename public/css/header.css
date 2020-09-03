@@ -24,18 +24,20 @@
     padding: 0px 0px 0px 20px;
 }
 .lista-user .header-profile{
-    margin: 0 25px;
+    margin: 0 30px;
     color: white;
     font-weight: bold;
     border-left: none;
     box-sizing: border-box;
     padding: 0px 6px;
-    border: 1px solid;
-    border-radius: 50%;
+    font-size: 17px;
 }
 .lista-user li a{
     text-decoration: none;
     color: white;
+}
+.icono-log-head{
+    margin: 0px 10px;
 }
 .header-contact-link{
     margin: 0px;

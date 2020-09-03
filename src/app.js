@@ -8,7 +8,9 @@ const session = require("express-session");
 
 const indexRouter = require('./routes/index');
 const accountRouter = require('./routes/account');
-const contactsRouter = require('./routes/contacts')
+const contactsRouter = require('./routes/contacts');
+
+const sessionMiddleware = require(path.join(__dirname, "./", "middleware","sessionMiddleware"));
 
 var app = express();
 
@@ -22,7 +24,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride('_method'));
-app.use(session( {secret:"mensajeUnico"}));
+app.use(session( {
+  secret:"mensajeUnico",
+  resave: false,
+  saveUninitialized:true,
+}));
+app.use(sessionMiddleware);
 
 app.use('/', indexRouter);
 app.use('/account', accountRouter);
