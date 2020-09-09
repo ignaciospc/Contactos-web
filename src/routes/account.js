@@ -4,9 +4,16 @@ const controllerAccount = require('../controller/controllerAccount');
 const path = require("path");
 const multer = require("multer");
 
+/************** Validaciones Back ******************/
+
 const validationLogin = require(path.join(__dirname,"../middleware/validation-back/validationLogin"));
 const validationRegister = require(path.join(__dirname,"../middleware/validation-back/validationRegister"));
+
+/***************** Middlewares *******************/
+
 const authLog = require(path.join(__dirname, "../middleware/authMiddleware.js"));
+
+/***************** Routes ************************/
 
 router.get('/login', controllerAccount.login);
 router.post('/login', validationLogin,  controllerAccount.processLogin);
@@ -16,6 +23,7 @@ router.get('/register', controllerAccount.registerForm);
 router.post('/register', validationRegister, controllerAccount.createUser);
 
 router.get('/profile', authLog,  controllerAccount.profile);
+router.post('/profile/logout', validationLogin, controllerAccount.logOut )
 
 
 

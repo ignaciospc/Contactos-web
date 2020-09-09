@@ -11,6 +11,7 @@ const accountRouter = require('./routes/account');
 const contactsRouter = require('./routes/contacts');
 
 const sessionMiddleware = require(path.join(__dirname, "./", "middleware","sessionMiddleware"));
+//const rememberMiddleware = require(path.join(__dirname, "./", "middleware","rememberUserCookie"));
 
 var app = express();
 
@@ -30,6 +31,7 @@ app.use(session( {
   saveUninitialized:true,
 }));
 app.use(sessionMiddleware);
+//app.use(rememberMiddleware)
 
 app.use('/', indexRouter);
 app.use('/account', accountRouter);

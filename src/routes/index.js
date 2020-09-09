@@ -1,8 +1,10 @@
-var express = require('express');
-var router = express.Router();
-let controllerIndex = require('../controller/controllerIndex')
+const express = require('express');
+const router = express.Router();
+const controllerIndex = require('../controller/controllerIndex');
+const path = require("path");
+const guestMiddleware = require(path.join(__dirname,("../middleware/guestMiddleware")));
 
-router.get('/', controllerIndex.home)
+router.get('/', guestMiddleware, controllerIndex.home)
 
 
 module.exports = router;

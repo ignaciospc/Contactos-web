@@ -69,12 +69,24 @@ module.exports ={
                 res.render("users/login", {errors:[
                     {msg:"credenciales invalidas"}
                 ]});
+            }else{
+                req.session.usuarioLogueado = usuarioALoguearse 
+                //res.send("credencialesinvalidas")
+    
+                /****** COOKIE RECORDAR USUARIO ********/
+    
+                let btnRemember = req.body.remember;
+                let emailUsuarioLogueado = usuarioALoguearse.email
+                let sal= 5
+    
+                if(btnRemember == "on"){
+                    res.cookie('recordarUser',emailUsuarioLogueado , {maxAge: 1800000}) //30 min
+                }
+    
+                res.redirect("/contact")
             }
 
-            req.session.usuarioLogueado = usuarioALoguearse 
-            //res.send("credencialesinvalidas")
-
-            res.redirect("/contact")
+           
 
           }else{
               
@@ -87,7 +99,8 @@ module.exports ={
     },
     processLoginHome: (req,res) => {
 
-        let errors = validationResult(req);
+       let errors = validationResult(req);
+          let usuarioALoguearse = undefined;
 
           if( errors.isEmpty() ){
 
@@ -95,25 +108,52 @@ module.exports ={
 
             for (let i = 0; i < contenidoJson.length; i++ ){
 
-                if(req.body.email === contenidoJson[i].email && bcrypt.compareSync(req.body.password, contenidoJson[i].password )){
-                   res.redirect("/account/profile/")
+                if(req.body.email === contenidoJson[i].email){
+                    if(bcrypt.compareSync(req.body.password, contenidoJson[i].password )){
+                          usuarioALoguearse = contenidoJson[i];
+                          break
+                    }
+                   
                 }
             }
-            
-            res.send("Credenciales Incorrectas")
-              
+
+            if (usuarioALoguearse == undefined){
+                res.render("users/login", {errors:[
+                    {msg:"credenciales invalidas"}
+                ]});
+            }
+
+            req.session.usuarioLogueado = usuarioALoguearse 
+            //res.send("credencialesinvalidas")
+
+            /****** COOKIE RECORDAR USUARIO ********/
+
+            let btnRemember = req.body.remember;
+            let emailUsuarioLogueado = usuarioALoguearse.email
+            let sal= 5
+
+            if(btnRemember == "on"){
+                res.cookie('recordarUser', emailUsuarioLogueado , {maxAge: 1800000}) //30 min
+            }
+
+            res.redirect("/contact")
+
           }else{
               
               return res.render("home/home",{errors : errors.errors});
 
           }
-
     },
     loadAvatar: (req, res) => {
 
         //logica cargar avatar
 
 
+    },
+    logOut: (req, res) => {
+        req.session.destroy();
+        res.cookie('recordarUser',null, {maxAge: -1}) //30 min
+        res.redirect("/")
     }
    
 

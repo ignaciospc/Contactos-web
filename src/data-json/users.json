@@ -12,5 +12,12 @@
   "email": "ignacio.n.soria@hotmail.com",
   "password": "$2b$10$dmFL9hbHnKDzGXpbbwNHvOdh2NLHAr.9BWrsPySa4Ifi.1N31xxpi",
   "id": 2
+ },
+ {
+  "nombre": "pruebas",
+  "apellido": "App",
+  "email": "prueba@hotmail.com",
+  "password": "$2b$10$R6GwdRFM/rTBAqPg405kEOB7ysnzJ8At9Q//boelnwG9oXc4qNLcq",
+  "id": 3
  }
 ]

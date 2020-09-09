@@ -75,7 +75,7 @@ module.exports = {
 
         fs.writeFileSync(contactsJson, nuevo)
 
-       res.redirect("/contact")
+        res.redirect("/contact")
 
 
     }

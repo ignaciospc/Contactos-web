@@ -107,6 +107,9 @@
     font-size: 13px;
     font-weight: bold;
 }
+.remember-label{
+    color: white;
+}
 @media(min-width:1440px){
     .container-login-page{
         margin: 150px auto;

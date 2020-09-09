@@ -11,14 +11,16 @@
 
 <div class="container-header">
     <div class="header-contact">
-        <div class="icon-home"><a href="/"><i class="fas fa-home"></i></a></div>
+        <%if(!locals.logueado.validacion){  %> 
+            <div class="icon-home"><a href="/"><i class="fas fa-home"></i></a></div>
+        <% } %>
         <span class="header-contact-link"><a href="/contact/">My Contacts</a></span>
     </div>
 
     <div class="menu-header-user">
         <ul class="lista-user">
-        <%if(locals.logueado){  %> 
-            <li class="header-profile"> <a href="/account/profile "> <%= locals.logueado.nombre %>    <i class="fas fa-user icono-log-head"></i> </a></li>
+        <%if(locals.logueado.validacion){  %> 
+            <li class="header-profile"> <a href="/account/profile "> <%= locals.logueado.nombre + " " +locals.logueado.apellido %> <i class="fas fa-user icono-log-head"></i> </a></li>
         <% } else {  %> 
             <li class="header-login"><a href="/account/login">Login</a> </li>
             <li class="header-register"> <a href="/account/register"> Register</a></li>
