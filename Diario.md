@@ -13,3 +13,4 @@
 03-9-2020 --- Se trabajo con res.locals y se puedo hacer aparecer login, register y profile cunado corresponde, queda colocar el nombre del user en el header ---
 04-9-2020 --- se termian de arregalar cosas con session y se comieza a trabajar con Cookie ---
 09-9-2020 --- se creo la cookie para recordar usuario, pero no funciona al 100%, se arreglaron problemas menores ---
+10-9-2020 --- se terminaron de crear las cookies y ya esta todo funcional por esa parte --

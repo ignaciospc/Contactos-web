@@ -77,10 +77,12 @@ module.exports ={
     
                 let btnRemember = req.body.remember;
                 let emailUsuarioLogueado = usuarioALoguearse.email
-                let sal= 5
+                let idUsuarioLogueado = usuarioALoguearse.id
+                let sal= 5 
     
                 if(btnRemember == "on"){
-                    res.cookie('recordarUser',emailUsuarioLogueado , {maxAge: 1800000}) //30 min
+                    res.cookie('recordarUser',bcrypt.hashSync(emailUsuarioLogueado,sal) , {maxAge: 1800000}) //30 min     cambiar mail por id
+                    res.cookie('recordarUserId', idUsuarioLogueado, {maxAge:1800000});
                 }
     
                 res.redirect("/contact")
@@ -130,12 +132,13 @@ module.exports ={
 
             let btnRemember = req.body.remember;
             let emailUsuarioLogueado = usuarioALoguearse.email
-            let sal= 5
+            let idUsuarioLogueado = usuarioALoguearse.id
+            let sal= 5 
 
             if(btnRemember == "on"){
-                res.cookie('recordarUser', emailUsuarioLogueado , {maxAge: 1800000}) //30 min
+                res.cookie('recordarUser',bcrypt.hashSync(emailUsuarioLogueado,sal) , {maxAge: 1800000}) //30 min     cambiar mail por id
+                res.cookie('recordaruserId', idUsuarioLogueado, {maxAge:1800000});
             }
-
             res.redirect("/contact")
 
           }else{
@@ -152,7 +155,9 @@ module.exports ={
     },
     logOut: (req, res) => {
         req.session.destroy();
-        res.cookie('recordarUser',null, {maxAge: -1}) //30 min
+        res.cookie('recordarUser',null, {maxAge: -1}) 
+        res.cookie('recordarUserId',null, {maxAge: -1}) 
+
         res.redirect("/")
     }
    
