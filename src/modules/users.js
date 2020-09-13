@@ -53,6 +53,18 @@ let moduleUser =  {
 
         return nroId + 1
 
+    },
+    uptdate : (userToEdit)=>{
+
+        let json = moduleUser.findAll();
+
+        let nuevoArray = json.filter( x => x.id != userToEdit.id );
+
+        nuevoArray.push(userToEdit)
+
+        let nuevo = JSON.stringify(nuevoArray, null, " ");
+
+        fs.writeFileSync(userJson, nuevo) 
     }
 
 }

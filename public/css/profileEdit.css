@@ -1,0 +1,111 @@
+.container-background-profile{
+    background-image: url('../images/site/background-home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Alata', sans-serif;
+}
+.container-background-profile{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 5px;
+}
+.container-profile-edit{
+    width: 100%;
+}
+.personal-date-edit{
+ background-color: rgb(0,0,0,0.6);
+ padding: 20px 15px;
+ margin: 15px 30px;
+ color: white;
+ border: 1px solid white;
+}
+.title-info-user{
+    color: white;
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.group-info-user{
+    margin: 15px 0;
+}
+.info-profile-edit{
+    margin: 0 15px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: rgb(241, 242, 3);
+    padding: 0px 5px;
+    border-bottom: 1px solid white;
+    width: 85%;
+    text-transform: uppercase;
+    font-size: 10px;
+
+}
+.edit-profile-ok{
+    margin: 15px 30px;
+    text-align: end;
+}
+.btn-editar-user{
+    padding: 7px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgb(246, 255, 82);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    color: black;
+    border: 1px solid black;
+}
+.btn-editar-user:hover{
+    background-color: rgb(197, 206, 32);
+    color: white;
+}
+
+@media(min-width:768px){
+    .personal-date-edit{
+        margin: 15px auto;
+        width: 55%;
+    }
+    .edit-profile-ok{
+        text-align: center;
+    }
+    .info-profile-edit{
+        font-size: 15px;
+    }
+}
+@media(min-width:1024px){
+   .container-profile-edit{
+       margin-bottom: 100px;
+   }
+   .title-info-user{
+       font-size: 25px;
+   }
+   .group-info-user{
+       font-size: 20px;
+   }
+   .btn-editar-user{
+       padding: 15px 30px;
+       font-size: 20px;
+   }
+   .info-profile-edit{
+    font-size: 19px;
+}
+}
+@media(min-width:1440px){
+    .container-profile-edit{
+        max-width: 1250px;
+        margin: 0 auto;
+    }
+    .personal-date-edit{
+        width: 65%;
+        padding: 40px 15px;
+        margin-bottom: 100px;
+    }
+    .info-profile-edit{
+        width: 90%;
+    }
+}

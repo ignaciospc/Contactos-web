@@ -34,11 +34,13 @@
             <div class="group-info-user" > <label for="">Email: </label> <span class="info-profile"> <%= user.email %></span> </div>
             <div class="group-info-user" > <label for="">Contraseña: </label> <span class="info-profile" type=> CONTRASEÑA </span> </div>
             <div class="btn-edit">
-                <button class="btn-edit-info-profile">Editar</button>
+                 <form action="/account/profile/edit" method="GET">
+                   <button class="btn-edit-info-profile">Editar</button>
+                </form>
             </div>
         </div>
         <div class="btn-log-out">
-            <form action="/account/profile/logout" method="POST">
+            <form action="/account/profile/logout?_method=DELETE" method="POST">
                <button class="log-out-profile">Log Out</button>
             </form>
         </div>

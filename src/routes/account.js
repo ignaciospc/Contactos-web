@@ -23,7 +23,9 @@ router.get('/register', controllerAccount.registerForm);
 router.post('/register', validationRegister, controllerAccount.createUser);
 
 router.get('/profile', authLog,  controllerAccount.profile);
-router.post('/profile/logout', validationLogin, controllerAccount.logOut )
+router.delete('/profile/logout', validationLogin, controllerAccount.logOut )
+router.get('/profile/edit', authLog, controllerAccount.editView)
+router.put('/profile/edit', authLog, controllerAccount.proccesEdit)
 
 
 

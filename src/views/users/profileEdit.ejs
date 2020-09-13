@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/profileEdit.css">
+    <title>Profile || name</title>
+</head>
+
+<%- include("../partials/header") %>
+
+<body class="container-background-profile">
+
+    
+
+    <div class="container-profile-edit">
+
+        <div class="personal-date-edit">
+            <label for="" class="title-info-user">Editando Informacion Personal</label>
+            <div class="group-info-user" > <label for="edit-name">Nombre: </label> <input  name="editName" id="editName" class="info-profile-edit" value="<%= user.nombre %> ">  </div>
+            <div class="group-info-user" > <label for="edit-surname">Apellido: </label> <input  name="editSurname" id="editSurname" class="info-profile-edit" value="<%= user.apellido %> ">  </div>
+            <div class="group-info-user" > <label for="edit-email">Email: </label> <input name="editEmail" id="editEmail"  class="info-profile-edit" value="<%= user.email %> "> </div>
+            <div class="group-info-user" > <label for="edit-passwor">Contraseña: </label> <input  name="editPasswor" id="editPasswor" class="info-profile-edit" value=" ******* " >  </div>
+        </div>
+
+        <div class="edit-profile-ok">
+            <form action="/account/profile/edit?_method=PUT" method="POST">
+               <button class="btn-editar-user">EDITAR</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+<%- include("../partials/footer") %>
+
+</html>

@@ -11,6 +11,7 @@ module.exports ={
        res.render("users/register");
     },
     profile: (req, res) =>{    
+       
         let infoUserLog = req.session.usuarioLogueado;
 
         res.render("users/profile",{user:infoUserLog});
@@ -159,7 +160,33 @@ module.exports ={
         res.cookie('recordarUserId',null, {maxAge: -1}) 
 
         res.redirect("/")
-    }
+    },
+    editView: (req, res) =>{
+
+        let infoUserLog = req.session.usuarioLogueado;
+
+        res.render("users/profileEdit",{user:infoUserLog});
+
+    },
+    proccesEdit:(req,res)=>{
+
+        let contenidoJson = moduleUser.findAll();
+        let userSession = req.session.usuarioLogueado;
+
+        let userToEdit = contenidoJson.find(x=> userSession.id === x.id);
+        
+        userToEdit.nombre = req.body.editName;
+
+        moduleUser.uptdate(userToEdit)
+
+        console.log(userSession);
+
+        res.send("ok")
+
+        //res.redirect("/account/profile")
+
+        
+    },
    
 
 }
