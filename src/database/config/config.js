@@ -1,9 +1,9 @@
 module.exports={
   "development": {
-    "username": "root",
+    "username": process.env.DB_USER,
     "password": null,
-    "database": "contactos_db",
-    "host": "localhost",
+    "database": process.env.DB_DATABASE,
+    "host": process.env.HOST,
     "dialect": "mysql",
     "operatorAliases": 0
   },

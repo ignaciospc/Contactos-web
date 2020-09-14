@@ -4,6 +4,10 @@ const moduloContacto = require('../modules/contacts.js');
 const contactsJson = path.join(__dirname, "../data-json/contacts.json"); 
 const {validationResult} = require("express-validator")
 
+const db = require("../database/models")
+
+
+
 
 
 
@@ -77,8 +81,16 @@ module.exports = {
 
         res.redirect("/contact")
 
+    },
+   /* prueba : (req, res) =>{
 
-    }
+        db.Contact.findAll()
+           .then((contacts)=>{
+                return res.send(contacts)
+           })
+        
+        
+    }*/
     
 
 }

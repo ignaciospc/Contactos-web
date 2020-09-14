@@ -17,4 +17,7 @@ router.put('/edit/:id', validationEditContact, controllerContacts.editContact)
 router.delete('/delete/:id',controllerContacts.deleteContact)
 
 
+/*** prueba mysql***/
+//router.get('/prueba', controllerContacts.prueba)
+
 module.exports = router;
