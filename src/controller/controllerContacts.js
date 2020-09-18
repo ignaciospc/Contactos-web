@@ -5,6 +5,7 @@ const contactsJson = path.join(__dirname, "../data-json/contacts.json");
 const {validationResult} = require("express-validator")
 
 const db = require("../database/models")
+const Sequelize = require('sequelize')
 
 
 
@@ -82,15 +83,16 @@ module.exports = {
         res.redirect("/contact")
 
     },
-   /* prueba : (req, res) =>{
+    prueba : (req, res) =>{
 
-        db.Contact.findAll()
+       db.Contact.findAll()
            .then((contacts)=>{
                 return res.send(contacts)
            })
+
         
         
-    }*/
+    }
     
 
 }
