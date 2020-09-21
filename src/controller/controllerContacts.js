@@ -4,11 +4,7 @@ const moduloContacto = require('../modules/contacts.js');
 const contactsJson = path.join(__dirname, "../data-json/contacts.json"); 
 const {validationResult} = require("express-validator")
 
-const db = require("../database/models")
-const Sequelize = require('sequelize')
-
-
-
+const db = require("../database/models/index")
 
 
 
@@ -83,16 +79,18 @@ module.exports = {
         res.redirect("/contact")
 
     },
-    prueba : (req, res) =>{
+    prueba : (req, res, next) =>{
 
-       db.Contact.findAll()
-           .then((contacts)=>{
-                return res.send(contacts)
-           })
+     
+
+         db.contact.findAll()  //aca me marca el error que no lee findAll()
+            .then((contactos)=>{
+                 return res.send(contactos)
+             })
 
         
+             
+
         
     }
-    
-
-}
+ }

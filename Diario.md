@@ -16,3 +16,4 @@
 11-9-2020 --- se creo el diagrama en MySQL de la DB ---
 12-9-2020 --- se creo el scritp de la DB en MySQL y se arreglaron unos problemas de version que no permitian avanzar ---
 13-9-2020 --- se instalaron las dependencias de sequelize y mysql2. aparte se comenzaron a crear los modelos para luego relacionarlos con la DB ---
+21-9-2020 --- se creo la tabala de contacts junto con su migracion y se la puedo conectar y mostrar las vistas correctamente. hay que crear dos tablas mas  y hacer sus relaciones ---
