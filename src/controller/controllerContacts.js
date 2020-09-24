@@ -81,16 +81,9 @@ module.exports = {
     },
     prueba : (req, res, next) =>{
 
-     
-
-         db.contact.findAll()  //aca me marca el error que no lee findAll()
-            .then((contactos)=>{
-                 return res.send(contactos)
-             })
-
-        
-             
-
-        
+         db.contacts.findAll()  
+            .then((contacto)=>{
+                 return res.send(contacto)
+             })       
     }
  }
